@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tender ro'yxati: bir qator = bitta so'rovdagi bitta taklif.
+         Ranglarni `tender_list` js_class beradi (static/src/tender_list_renderer.js). -->
+    <record id="view_tender_line_list" model="ir.ui.view">
+        <field name="name">purchase.order.line.tender.list</field>
+        <field name="model">purchase.order.line</field>
+        <field name="arch" type="xml">
+            <list string="Tender"
+                  js_class="tender_list"
+                  create="false"
+                  edit="false"
+                  default_order="product_id, tender_price_unit_cc">
+                <field name="tender_is_candidate" column_invisible="1"/>
+                <field name="tender_company_currency_id" column_invisible="1"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="product_id" optional="hide"/>
+                <field name="order_id" string="Request for Quotation"/>
+                <field name="partner_id" string="Vendor"/>
+                <field name="state" string="Status" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-success="state == 'sent'"/>
+                <field name="date_planned" string="Expected Arrival"/>
+                <field name="tender_price_label" string="Unit Price"/>
+                <field name="tender_price_unit_cc" string="Unit Price (Company)" optional="hide"/>
+                <field name="product_qty" string="Quantity"/>
+                <field name="product_uom_id" string="Unit" optional="show"/>
+                <button name="action_tender_choose"
+                        type="object"
+                        string="Choose"
+                        icon="fa-check"
+                        class="btn-link text-success"
+                        groups="purchase.group_purchase_manager"
+                        confirm="Award this product to this vendor? On every other request for quotation the line for this product will be removed; a request that has no other line is cancelled."/>
+                <button name="action_tender_cancel"
+                        type="object"
+                        string="Cancel"
+                        icon="fa-times"
+                        class="btn-link text-danger"
+                        groups="purchase.group_purchase_manager"
+                        confirm="Drop this offer from the tender? The line will be removed from its request for quotation; if it has no other line the request is cancelled."/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_tender_line_search" model="ir.ui.view">
+        <field name="name">purchase.order.line.tender.search</field>
+        <field name="model">purchase.order.line</field>
+        <field name="arch" type="xml">
+            <search string="Tender">
+                <field name="product_id"/>
+                <field name="order_id" string="Request for Quotation"/>
+                <field name="partner_id" string="Vendor"/>
+                <filter name="filter_state_draft" string="RFQ"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_sent" string="RFQ Sent"
+                        domain="[('state', '=', 'sent')]"/>
+                <group>
+                    <filter name="groupby_product" string="Product" domain="[]"
+                            context="{'group_by': 'product_id'}"/>
+                    <filter name="groupby_vendor" string="Vendor" domain="[]"
+                            context="{'group_by': 'partner_id'}"/>
+                    <filter name="groupby_order" string="Request for Quotation" domain="[]"
+                            context="{'group_by': 'order_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_purchase_tender" model="ir.actions.act_window">
+        <field name="name">Tender</field>
+        <field name="res_model">purchase.order.line</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_tender_line_list"/>
+        <field name="search_view_id" ref="view_tender_line_search"/>
+        <field name="domain">[('tender_is_candidate', '=', True)]</field>
+        <field name="context">{'search_default_groupby_product': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No product is up for tender yet
+            </p>
+            <p>
+                A product shows up here as soon as two or more open requests for
+                quotation ask for it. Compare the offers, then award one vendor.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_purchase_tender"
+              name="Tender"
+              parent="purchase.menu_purchase_root"
+              action="action_purchase_tender"
+              groups="purchase.group_purchase_user"
+              sequence="99"/>
+
+</odoo>
