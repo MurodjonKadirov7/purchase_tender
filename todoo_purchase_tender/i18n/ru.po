@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* purchase_tender
+# 	* todoo_purchase_tender
 #
 msgid ""
 msgstr ""
@@ -18,8 +18,8 @@ msgstr ""
 
 
 
-#. module: purchase_tender
-#: model_terms:ir.actions.act_window,help:purchase_tender.action_purchase_tender
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
 msgid ""
 "A product shows up here as soon as two or more open requests for\n"
 "                quotation ask for it. Compare the offers, then award one vendor."
@@ -27,211 +27,211 @@ msgstr ""
 "Товар появляется здесь, как только его запрашивают два или более\n"
 "                открытых запроса цен. Сравните предложения и выберите поставщика."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid ""
 "Award this product to this vendor? On every other request for quotation the "
 "line for this product will be removed; a request that has no other line is "
 "cancelled."
 msgstr "Отдать этот товар данному поставщику? Во всех остальных запросах цен строка по этому товару будет удалена; запрос без других строк будет отменён."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Cancel"
 msgstr "Отменить"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Choose"
 msgstr "Выбрать"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__display_name
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__display_name
 msgid "Display Name"
 msgstr "Отображаемое имя"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid ""
 "Drop this offer from the tender? The line will be removed from its request "
 "for quotation; if it has no other line the request is cancelled."
 msgstr "Убрать это предложение из тендера? Строка будет удалена из своего запроса цен; если других строк нет, запрос будет отменён."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Expected Arrival"
 msgstr "Ожидаемая поставка"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__id
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__id
 msgid "ID"
 msgstr "ID"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__tender_is_candidate
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
 msgid "In Tender"
 msgstr "В тендере"
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "It was the only line, so the request for quotation has been cancelled."
 msgstr "Это была единственная строка, поэтому запрос цен отменён."
 
-#. module: purchase_tender
-#: model_terms:ir.actions.act_window,help:purchase_tender.action_purchase_tender
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
 msgid "No product is up for tender yet"
 msgstr "Пока ни один товар не вынесен на тендер"
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "Only a Purchase Manager can award or drop a tender offer."
 msgstr "Выбрать или отклонить тендерное предложение может только менеджер по закупкам."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "Product"
 msgstr "Товар"
 
-#. module: purchase_tender
-#: model:ir.model,name:purchase_tender.model_purchase_order_line
+#. module: todoo_purchase_tender
+#: model:ir.model,name:todoo_purchase_tender.model_purchase_order_line
 msgid "Purchase Order Line"
 msgstr "Позиция заказа на покупку"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Quantity"
 msgstr "Количество"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "RFQ"
 msgstr "Запрос цен"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "RFQ Sent"
 msgstr "Запрос отправлен"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "Request for Quotation"
 msgstr "Запрос цен"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Status"
 msgstr "Статус"
 
-#. module: purchase_tender
-#: model:ir.model.fields,help:purchase_tender.field_purchase_order_line__tender_is_candidate
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
 msgid ""
 "Technical: the line is an open offer for a product that at least two "
 "different requests for quotation ask for."
 msgstr "Техническое: строка — это открытое предложение по товару, который запрашивают минимум два разных запроса цен."
 
-#. module: purchase_tender
-#: model:ir.actions.act_window,name:purchase_tender.action_purchase_tender
-#: model:ir.ui.menu,name:purchase_tender.menu_purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model:ir.actions.act_window,name:todoo_purchase_tender.action_purchase_tender
+#: model:ir.ui.menu,name:todoo_purchase_tender.menu_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "Tender"
 msgstr "Тендер"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__tender_company_currency_id
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_company_currency_id
 msgid "Tender Company Currency"
 msgstr "Тендер: валюта компании"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__tender_price_label
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_label
 msgid "Tender Unit Price"
 msgstr "Тендер: цена за единицу"
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid ""
 "Tender: %(product)s awarded to %(vendor)s — %(qty)s at %(price)s. %(count)s "
 "competing offer(s) cleared."
 msgstr "Тендер: %(product)s отдан поставщику %(vendor)s — %(qty)s по цене %(price)s. Конкурирующих предложений очищено: %(count)s."
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid ""
 "Tender: %(product)s was awarded to %(vendor)s on %(order)s. %(outcome)s"
 msgstr "Тендер: %(product)s отдан поставщику %(vendor)s по документу %(order)s. %(outcome)s"
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid ""
 "Tender: the offer from %(vendor)s for %(product)s was dropped. %(outcome)s"
 msgstr "Тендер: предложение поставщика %(vendor)s по товару %(product)s убрано. %(outcome)s"
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "The line has been removed."
 msgstr "Строка удалена."
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "This line has been removed."
 msgstr "Эта строка удалена."
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "This offer is no longer part of an open tender."
 msgstr "Это предложение больше не входит в открытый тендер."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Unit"
 msgstr "Ед. изм."
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Unit Price"
 msgstr "Цена за единицу"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
 msgid "Unit Price (Company)"
 msgstr "Цена за единицу (компания)"
 
-#. module: purchase_tender
-#: model:ir.model.fields,field_description:purchase_tender.field_purchase_order_line__tender_price_unit_cc
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
 msgid "Unit Price in Company Currency"
 msgstr "Цена за единицу в валюте компании"
 
-#. module: purchase_tender
-#: model:ir.model.fields,help:purchase_tender.field_purchase_order_line__tender_price_unit_cc
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
 msgid ""
 "Unit price converted with the order's own currency rate, so that offers made"
 " in different currencies can be compared."
 msgstr "Цена за единицу, пересчитанная по курсу самого запроса, чтобы можно было сравнивать предложения в разных валютах."
 
-#. module: purchase_tender
-#: model:ir.model.fields,help:purchase_tender.field_purchase_order_line__tender_price_label
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_label
 msgid ""
 "Unit price in the order currency, followed by its company currency value "
 "when the two differ."
 msgstr "Цена за единицу в валюте запроса; если валюты различаются, в скобках показывается значение в валюте компании."
 
-#. module: purchase_tender
+#. module: todoo_purchase_tender
 #. odoo-python
-#: code:addons/purchase_tender/models/purchase_order_line.py:0
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
 msgid "Unsupported operator"
 msgstr "Неподдерживаемый оператор"
 
-#. module: purchase_tender
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_list
-#: model_terms:ir.ui.view,arch_db:purchase_tender.view_tender_line_search
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
 msgid "Vendor"
 msgstr "Поставщик"

@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* todoo_purchase_tender
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260803\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-14 10:52+0000\n"
+"PO-Revision-Date: 2026-08-14 10:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
+msgid ""
+"A product shows up here as soon as two or more open requests for\n"
+"                quotation ask for it. Compare the offers, then award one vendor."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid ""
+"Award this product to this vendor? On every other request for quotation the "
+"line for this product will be removed; a request that has no other line is "
+"cancelled."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Cancel"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Choose"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid ""
+"Drop this offer from the tender? The line will be removed from its request "
+"for quotation; if it has no other line the request is cancelled."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Expected Arrival"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
+msgid "In Tender"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "It was the only line, so the request for quotation has been cancelled."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
+msgid "No product is up for tender yet"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "Only a Purchase Manager can award or drop a tender offer."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Product"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model,name:todoo_purchase_tender.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Quantity"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "RFQ"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "RFQ Sent"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Request for Quotation"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Status"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
+msgid ""
+"Technical: the line is an open offer for a product that at least two "
+"different requests for quotation ask for."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.actions.act_window,name:todoo_purchase_tender.action_purchase_tender
+#: model:ir.ui.menu,name:todoo_purchase_tender.menu_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Tender"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_company_currency_id
+msgid "Tender Company Currency"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_label
+msgid "Tender Unit Price"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: %(product)s awarded to %(vendor)s — %(qty)s at %(price)s. %(count)s "
+"competing offer(s) cleared."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: %(product)s was awarded to %(vendor)s on %(order)s. %(outcome)s"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: the offer from %(vendor)s for %(product)s was dropped. %(outcome)s"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "The line has been removed."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "This line has been removed."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "This offer is no longer part of an open tender."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit Price"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit Price (Company)"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
+msgid "Unit Price in Company Currency"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
+msgid ""
+"Unit price converted with the order's own currency rate, so that offers made"
+" in different currencies can be compared."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_label
+msgid ""
+"Unit price in the order currency, followed by its company currency value "
+"when the two differ."
+msgstr ""
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "Unsupported operator"
+msgstr ""
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Vendor"
+msgstr ""

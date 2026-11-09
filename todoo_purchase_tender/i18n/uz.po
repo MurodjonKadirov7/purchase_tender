@@ -1,0 +1,237 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* todoo_purchase_tender
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260803\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-14 10:52+0000\n"
+"PO-Revision-Date: 2026-08-14 10:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: uz\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
+msgid ""
+"A product shows up here as soon as two or more open requests for\n"
+"                quotation ask for it. Compare the offers, then award one vendor."
+msgstr ""
+"Mahsulot ikki yoki undan ortiq ochiq narx so'rovida uchrashi bilan shu\n"
+"                yerda paydo bo'ladi. Takliflarni solishtiring va bittasini tanlang."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid ""
+"Award this product to this vendor? On every other request for quotation the "
+"line for this product will be removed; a request that has no other line is "
+"cancelled."
+msgstr "Shu mahsulot shu yetkazib beruvchiga beriladimi? Qolgan barcha narx so'rovlarida bu mahsulot qatori o'chiriladi; boshqa qatori yo'q so'rov bekor qilinadi."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Choose"
+msgstr "Tanlash"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__display_name
+msgid "Display Name"
+msgstr "Ko‘rsatiladigan nom"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid ""
+"Drop this offer from the tender? The line will be removed from its request "
+"for quotation; if it has no other line the request is cancelled."
+msgstr "Bu taklif tenderdan olib tashlansinmi? Qator o'z narx so'rovidan o'chiriladi; so'rovda boshqa qator bo'lmasa, so'rovning o'zi bekor qilinadi."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Expected Arrival"
+msgstr "Kutilayotgan yetkazib berish"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
+msgid "In Tender"
+msgstr "Tenderda"
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "It was the only line, so the request for quotation has been cancelled."
+msgstr "Bu yagona qator edi, shuning uchun narx so'rovi bekor qilindi."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.actions.act_window,help:todoo_purchase_tender.action_purchase_tender
+msgid "No product is up for tender yet"
+msgstr "Hozircha tenderga chiqqan mahsulot yo'q"
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "Only a Purchase Manager can award or drop a tender offer."
+msgstr "Tender taklifini faqat xarid menejeri tanlashi yoki bekor qilishi mumkin."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Product"
+msgstr "Mahsulot"
+
+#. module: todoo_purchase_tender
+#: model:ir.model,name:todoo_purchase_tender.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Xarid buyurtmasi qatori"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Quantity"
+msgstr "Miqdor"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "RFQ"
+msgstr "Narx so'rovi"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "RFQ Sent"
+msgstr "So'rov yuborilgan"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Request for Quotation"
+msgstr "Narx so'rovi"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Status"
+msgstr "Holat"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_is_candidate
+msgid ""
+"Technical: the line is an open offer for a product that at least two "
+"different requests for quotation ask for."
+msgstr "Texnik: qator — kamida ikki xil narx so'rovi so'ragan mahsulot bo'yicha ochiq taklif."
+
+#. module: todoo_purchase_tender
+#: model:ir.actions.act_window,name:todoo_purchase_tender.action_purchase_tender
+#: model:ir.ui.menu,name:todoo_purchase_tender.menu_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Tender"
+msgstr "Tender"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_company_currency_id
+msgid "Tender Company Currency"
+msgstr "Tender: kompaniya valyutasi"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_label
+msgid "Tender Unit Price"
+msgstr "Tender: birlik narxi"
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: %(product)s awarded to %(vendor)s — %(qty)s at %(price)s. %(count)s "
+"competing offer(s) cleared."
+msgstr "Tender: %(product)s %(vendor)s ga berildi — %(qty)s, narxi %(price)s. %(count)s ta raqobatchi taklif tozalandi."
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: %(product)s was awarded to %(vendor)s on %(order)s. %(outcome)s"
+msgstr "Tender: %(product)s %(order)s bo'yicha %(vendor)s ga berildi. %(outcome)s"
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid ""
+"Tender: the offer from %(vendor)s for %(product)s was dropped. %(outcome)s"
+msgstr "Tender: %(vendor)s ning %(product)s bo'yicha taklifi olib tashlandi. %(outcome)s"
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "The line has been removed."
+msgstr "Qator o'chirildi."
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "This line has been removed."
+msgstr "Bu qator o'chirildi."
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "This offer is no longer part of an open tender."
+msgstr "Bu taklif endi ochiq tender tarkibida emas."
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit"
+msgstr "Birlik"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit Price"
+msgstr "Birlik narxi"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+msgid "Unit Price (Company)"
+msgstr "Birlik narxi (kompaniya)"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,field_description:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
+msgid "Unit Price in Company Currency"
+msgstr "Kompaniya valyutasidagi birlik narxi"
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_unit_cc
+msgid ""
+"Unit price converted with the order's own currency rate, so that offers made"
+" in different currencies can be compared."
+msgstr "Birlik narxi so'rovning o'z valyuta kursi bo'yicha o'girilgan — turli valyutadagi takliflarni solishtirish uchun."
+
+#. module: todoo_purchase_tender
+#: model:ir.model.fields,help:todoo_purchase_tender.field_purchase_order_line__tender_price_label
+msgid ""
+"Unit price in the order currency, followed by its company currency value "
+"when the two differ."
+msgstr "So'rov valyutasidagi birlik narxi; valyutalar farq qilsa, qavs ichida kompaniya valyutasidagi qiymati ko'rsatiladi."
+
+#. module: todoo_purchase_tender
+#. odoo-python
+#: code:addons/todoo_purchase_tender/models/purchase_order_line.py:0
+msgid "Unsupported operator"
+msgstr "Qo'llab-quvvatlanmaydigan operator"
+
+#. module: todoo_purchase_tender
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_list
+#: model_terms:ir.ui.view,arch_db:todoo_purchase_tender.view_tender_line_search
+msgid "Vendor"
+msgstr "Yetkazib beruvchi"

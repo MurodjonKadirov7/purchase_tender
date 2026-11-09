@@ -52,8 +52,8 @@ can be used side by side or on their own.
     ],
     "assets": {
         "web.assets_backend": [
-            "purchase_tender/static/src/tender_list_renderer.js",
-            "purchase_tender/static/src/tender_list_view.js",
+            "todoo_purchase_tender/static/src/tender_list_renderer.js",
+            "todoo_purchase_tender/static/src/tender_list_view.js",
         ],
     },
     "images": [
