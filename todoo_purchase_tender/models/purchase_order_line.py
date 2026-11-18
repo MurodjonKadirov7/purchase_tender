@@ -4,15 +4,14 @@ from collections import defaultdict
 
 from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Domain
 from odoo.tools import format_amount
 from odoo.tools.float_utils import float_compare
 
 MANAGER_GROUP = "purchase.group_purchase_manager"
 
 # Tenderda faqat ochiq so'rovlar qatnashadi: RFQ va RFQ Sent.
-# Manba: purchase/models/purchase_order.py — state selection ('draft', 'sent',
-# 'to approve', 'purchase', 'done', 'cancel').
+# Manba: purchase/models/purchase_order.py:99-106 — state selection ('draft',
+# 'sent', 'to approve', 'purchase', 'done', 'cancel').
 TENDER_STATES = ("draft", "sent")
 
 
@@ -20,7 +19,7 @@ class PurchaseOrderLine(models.Model):
     _inherit = "purchase.order.line"
 
     # Diqqat: purchase_requisition o'rnatilsa aynan `company_currency_id` nomli
-    # field qo'shadi (purchase_requisition/models/purchase.py:254). Ikki modul
+    # field qo'shadi (purchase_requisition/models/purchase.py:266). Ikki modul
     # bir-biriga tegmasligi uchun bu yerda o'z nom maydonimiz ishlatiladi.
     # Yorliq ham noyob bo'lishi shart: bir modelda bir xil yorliqli ikki field
     # bo'lsa Odoo ogohlantiradi va filtr ro'yxatida ikkisi ajratib bo'lmaydi.
@@ -60,9 +59,9 @@ class PurchaseOrderLine(models.Model):
         """Birlik narxini kompaniya valyutasiga o'giradi.
 
         `currency_rate` core `purchase` da store=True
-        (purchase/models/purchase_order.py:164-170), shuning uchun qo'shimcha
-        bog'liqlik kerak emas. Core ham summani aynan shu kursga bo'ladi
-        (purchase/models/purchase_order_line.py:142).
+        (purchase/models/purchase_order.py:150-156), shuning uchun qo'shimcha
+        bog'liqlik kerak emas. Core ham soliq hisobiga aynan shu kursni beradi
+        (purchase/models/purchase_order_line.py:114).
         """
         for line in self:
             rate = line.order_id.currency_rate
@@ -71,7 +70,7 @@ class PurchaseOrderLine(models.Model):
     # `format_amount` summani foydalanuvchi tiliga qarab yozadi, shuning uchun
     # til kesh kalitiga kirishi shart — aks holda birinchi o'qilgan tildagi
     # ko'rinish qolgan tillarga ham qaytariladi
-    # (idioma: account/models/account_move.py:975).
+    # (idioma: account/models/account_move.py:979).
     @api.depends_context("lang")
     @api.depends(
         "price_unit",
@@ -111,8 +110,8 @@ class PurchaseOrderLine(models.Model):
     def _search_tender_is_candidate(self, operator, value):
         """Domenda ishlatish uchun.
 
-        Idioma core'dan olingan: faqat `=` / `!=` qo'llab-quvvatlanadi
-        (purchase/models/purchase_order.py:367-369 — `_search_is_late`).
+        Idioma core'dan olingan: faqat `=` / `!=`, natija oddiy domen ro'yxati
+        (purchase/models/product.py:106-112 — `_search_is_in_purchase_order`).
         """
         if operator not in ("=", "!="):
             raise ValidationError(self.env._("Unsupported operator"))
@@ -129,7 +128,7 @@ class PurchaseOrderLine(models.Model):
                 if (line.product_id.id, line.company_id.id) in pairs
             ]
         positive = (operator == "=") == bool(value)
-        return Domain("id", "in" if positive else "not in", line_ids)
+        return [("id", "in" if positive else "not in", line_ids)]
 
     # ------------------------------------------------------------------ tender to'plami
 
@@ -146,8 +145,7 @@ class PurchaseOrderLine(models.Model):
     def _tender_candidate_pairs(self):
         """{(product_id, company_id)} — kamida ikki xil so'rovda uchragan mahsulotlar.
 
-        `count_distinct` agregati Odoo 19 da mavjud (odoo/orm/models.py:312),
-        ishlatilishi: equity/models/res_partner.py:50-56.
+        `count_distinct` agregati Odoo 18 da mavjud (odoo/models.py:376).
         Kompaniya ham guruhlash kalitida — turli kompaniyalar aralashmaydi.
         """
         groups = self._read_group(
@@ -169,7 +167,9 @@ class PurchaseOrderLine(models.Model):
         qiymatlar bo'lsa hammasi belgilanadi.
         """
         lines = self.search([("tender_is_candidate", "=", True)])
-        qty_precision = self.env["decimal.precision"].precision_get("Product Unit")
+        qty_precision = self.env["decimal.precision"].precision_get(
+            "Product Unit of Measure"
+        )
         best_price, best_date, best_qty = [], [], []
         groups = defaultdict(lambda: self.browse())
         for line in lines:
@@ -216,9 +216,8 @@ class PurchaseOrderLine(models.Model):
         qoldirishdan ko'ra buni bekor qilgan ma'qul, taklif miqdori esa tarix
         uchun joyida qoladi.
 
-        `button_cancel` core'niki (purchase/models/purchase_order.py:641-649);
-        draft/sent so'rovda uning ikkala to'sig'i (locked, hisob-faktura) ham
-        ishlamaydi.
+        `button_cancel` core'niki (purchase/models/purchase_order.py:553-557);
+        draft/sent so'rovda uning to'sig'i (hisob-faktura) ishlamaydi.
         """
         self.ensure_one()
         product_lines = self.order_id.order_line.filtered(lambda l: not l.display_type)

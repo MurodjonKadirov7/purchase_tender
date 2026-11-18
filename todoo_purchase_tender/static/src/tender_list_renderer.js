@@ -49,7 +49,7 @@ export class TenderListRenderer extends ListRenderer {
      * (Purchase ilovasi ichida). Choose/Cancel tugmalari o'z ishini qiladi —
      * onButtonCellClicked tugma ustida bosilganda onCellClicked'ni chaqirmaydi.
      */
-    async onCellClicked(record, column, ev, newWindow) {
+    async onCellClicked(record, column, ev) {
         const orderVal = record.data.order_id;
         const orderId = Array.isArray(orderVal)
             ? orderVal[0]

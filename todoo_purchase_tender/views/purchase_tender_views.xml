@@ -22,10 +22,10 @@
                        decoration-info="state == 'draft'"
                        decoration-success="state == 'sent'"/>
                 <field name="date_planned" string="Expected Arrival"/>
-                <field name="tender_price_label" string="Unit Price"/>
+                <field name="tender_price_label" string="Unit Price" width="240px"/>
                 <field name="tender_price_unit_cc" string="Unit Price (Company)" optional="hide"/>
                 <field name="product_qty" string="Quantity"/>
-                <field name="product_uom_id" string="Unit" optional="show"/>
+                <field name="product_uom" string="Unit" optional="show"/>
                 <button name="action_tender_choose"
                         type="object"
                         string="Choose"

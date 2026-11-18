@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Purchase Tender | RFQ Comparison | Compare Vendor Quotations",
-    "version": "19.0.2.4.0",
+    "version": "18.0.2.4.0",
     "category": "Purchase",
     "summary": (
         "Compare every open RFQ offer product by product, with the earliest "
