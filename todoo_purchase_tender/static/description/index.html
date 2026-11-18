@@ -10,7 +10,7 @@
       themselves &mdash; no Purchase Agreement needed.
     </p>
     <div class="d-flex flex-wrap justify-content-center gap-2">
-      <span style="background-color:#985184;padding:6px 12px;border-radius:20px;font-size:13px;color:#fff;">Odoo 19</span>
+      <span style="background-color:#985184;padding:6px 12px;border-radius:20px;font-size:13px;color:#fff;">Odoo 20</span>
       <span style="background-color:#985184;padding:6px 12px;border-radius:20px;font-size:13px;color:#fff;">Community &amp; Enterprise</span>
       <span style="background-color:#985184;padding:6px 12px;border-radius:20px;font-size:13px;color:#fff;">Multi-currency comparison</span>
       <span style="background-color:#985184;padding:6px 12px;border-radius:20px;font-size:13px;color:#fff;">One-click award</span>
@@ -28,7 +28,7 @@
         <li>Offers in different currencies compared by hand</li>
         <li>The losing lines deleted manually, one order at a time</li>
         <li>Nothing on record about why that vendor was chosen</li>
-        <li>Purchase Agreements installed just to run a comparison</li>
+        <li>Purchase Agreements or Alternatives installed just to compare offers</li>
       </ul>
     </div></div>
     <div class="col-md-6"><div style="background-color:#F7EDF4;border:1px solid #DCBBD2;border-radius:12px;padding:24px;height:100%;">
@@ -38,7 +38,7 @@
         <li>Prices converted to the company currency, both shown side by side</li>
         <li><b>Choose</b> clears the competing lines in one click</li>
         <li>Each touched request gets a chatter note saying what happened</li>
-        <li>Standard Purchase only &mdash; <code>purchase_requisition</code> not required</li>
+        <li>Standard Purchase only &mdash; <code>purchase_requisition</code> and <code>purchase_alternative</code> not required</li>
       </ul>
     </div></div>
   </div>
@@ -109,67 +109,38 @@
     </div>
   </div>
 
-  <!-- WHAT YOU SEE -->
-  <h2 style="text-align:center;font-size:28px;margin:48px 0 24px;color:#6C3A5F;">What the screen looks like</h2>
-  <p style="text-align:center;color:#4b5563;max-width:760px;margin:0 auto 24px;">
-    One product, three vendors, three open requests for quotation. Nothing was entered twice &mdash;
-    these are the ordinary request lines, read back side by side. The green cells are the best
-    offer in each column, and they are picked per column, so one vendor does not have to win everything.
-  </p>
+  <!-- SCREENSHOTS (Odoo 20) -->
+  <h2 style="text-align:center;font-size:28px;margin:48px 0 24px;color:#6C3A5F;">Screenshots</h2>
 
-  <div style="border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:12px;">
-    <div style="background:#6C3A5F;color:#fff;padding:10px 16px;font-weight:600;font-size:15px;">
-      Purchase &rarr; Tender &nbsp;&middot;&nbsp; grouped by Product
-    </div>
-    <div style="overflow-x:auto;">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:680px;">
-        <tr style="background:#f9fafb;border-bottom:2px solid #e5e7eb;color:#6b7280;">
-          <td style="padding:10px 14px;font-weight:600;">Request for Quotation</td>
-          <td style="padding:10px 14px;font-weight:600;">Vendor</td>
-          <td style="padding:10px 14px;font-weight:600;">Status</td>
-          <td style="padding:10px 14px;font-weight:600;">Expected Arrival</td>
-          <td style="padding:10px 14px;font-weight:600;text-align:right;">Unit Price</td>
-          <td style="padding:10px 14px;font-weight:600;text-align:right;">Quantity</td>
-          <td style="padding:10px 14px;font-weight:600;">Unit</td>
-        </tr>
-        <tr style="background:#f3f4f6;border-bottom:1px solid #e5e7eb;">
-          <td colspan="7" style="padding:10px 14px;font-weight:700;color:#374151;">&#9662;&nbsp; Steel Pipe 40&times;40 &nbsp;<span style="font-weight:400;color:#6b7280;">(3)</span></td>
-        </tr>
-        <tr style="border-bottom:1px solid #f3f4f6;">
-          <td style="padding:10px 14px;">P00142</td>
-          <td style="padding:10px 14px;">Alfa Metal LLC</td>
-          <td style="padding:10px 14px;"><span style="background:#e0f2fe;color:#0369a1;border-radius:10px;padding:2px 10px;font-size:12px;">RFQ</span></td>
-          <td style="padding:10px 14px;">12/04/2026</td>
-          <td style="padding:10px 14px;text-align:right;"><b style="color:#16a34a;">$ 18.40</b></td>
-          <td style="padding:10px 14px;text-align:right;">500.00</td>
-          <td style="padding:10px 14px;">Units</td>
-        </tr>
-        <tr style="border-bottom:1px solid #f3f4f6;">
-          <td style="padding:10px 14px;">P00143</td>
-          <td style="padding:10px 14px;">Baraka Steel</td>
-          <td style="padding:10px 14px;"><span style="background:#dcfce7;color:#15803d;border-radius:10px;padding:2px 10px;font-size:12px;">RFQ Sent</span></td>
-          <td style="padding:10px 14px;"><b style="color:#16a34a;">28/03/2026</b></td>
-          <td style="padding:10px 14px;text-align:right;">$ 19.10</td>
-          <td style="padding:10px 14px;text-align:right;">400.00</td>
-          <td style="padding:10px 14px;">Units</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 14px;">P00147</td>
-          <td style="padding:10px 14px;">Nurli Trade</td>
-          <td style="padding:10px 14px;"><span style="background:#dcfce7;color:#15803d;border-radius:10px;padding:2px 10px;font-size:12px;">RFQ Sent</span></td>
-          <td style="padding:10px 14px;">15/04/2026</td>
-          <td style="padding:10px 14px;text-align:right;">$ 18.95</td>
-          <td style="padding:10px 14px;text-align:right;"><b style="color:#16a34a;">750.00</b></td>
-          <td style="padding:10px 14px;">Units</td>
-        </tr>
-      </table>
-    </div>
+  <div style="margin-bottom:40px;">
+    <h4 style="color:#6C3A5F;font-weight:700;margin-bottom:6px;">Purchase &rarr; Tender, grouped by product</h4>
+    <p style="color:#4b5563;line-height:1.7;margin-bottom:14px;">
+      Three products, five vendors, five ordinary requests for quotation &mdash; nothing entered twice.
+      The green cells are the best offer in each column, picked per column, so one vendor does not have to win
+      everything: for the office chair Deco Addict is cheapest and offers the most, Azure Interior arrives first.
+      Azure Interior quotes in euros, and its price is shown with the company-currency value next to it.
+    </p>
+    <img src="screenshots/01-tender.png" alt="Tender list grouped by product, best price, date and quantity in green" style="width:100%;border:1px solid #e5e7eb;border-radius:10px;"/>
   </div>
-  <p style="color:#6b7280;font-size:14px;margin:0 0 32px;">
-    Alfa Metal is cheapest, Baraka arrives first, Nurli offers the largest quantity &mdash;
-    three different winners, each marked in its own column. A <b>Choose</b> and a <b>Cancel</b>
-    button sit at the end of every row for a purchase manager.
-  </p>
+
+  <div style="margin-bottom:40px;">
+    <h4 style="color:#6C3A5F;font-weight:700;margin-bottom:6px;">Choose asks before it acts</h4>
+    <p style="color:#4b5563;line-height:1.7;margin-bottom:14px;">
+      <b>Choose</b> and <b>Cancel</b> are shown to a purchase manager only, and both say what will happen before
+      anything changes.
+    </p>
+    <img src="screenshots/02-choose-confirm.png" alt="Confirmation dialog of the Choose button" style="width:100%;border:1px solid #e5e7eb;border-radius:10px;"/>
+  </div>
+
+  <div style="margin-bottom:40px;">
+    <h4 style="color:#6C3A5F;font-weight:700;margin-bottom:6px;">The decision stays on record</h4>
+    <p style="color:#4b5563;line-height:1.7;margin-bottom:14px;">
+      The laptop was awarded to Gemini Furniture. Its request for quotation keeps its status and lines, and the
+      chatter says what was awarded, at what price, and how many competing offers were cleared. Every other
+      request that lost a line gets a note as well.
+    </p>
+    <img src="screenshots/03-chatter.png" alt="Request for quotation with the tender note in the chatter" style="width:100%;border:1px solid #e5e7eb;border-radius:10px;"/>
+  </div>
 
   <h2 style="text-align:center;font-size:28px;margin:48px 0 24px;color:#6C3A5F;">Prices are compared, not just listed</h2>
   <p style="text-align:center;color:#4b5563;max-width:760px;margin:0 auto 24px;">
@@ -180,7 +151,7 @@
   <div style="border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:32px;">
     <div style="overflow-x:auto;">
       <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:560px;">
-        <tr style="background:#f9fafb;border-bottom:2px solid #e5e7eb;color:#6b7280;">
+        <tr style="background-color:#f9fafb;border-bottom:2px solid #e5e7eb;color:#6b7280;">
           <td style="padding:10px 14px;font-weight:600;">Vendor</td>
           <td style="padding:10px 14px;font-weight:600;text-align:right;">Unit Price</td>
           <td style="padding:10px 14px;font-weight:600;text-align:right;">Unit Price (Company)</td>
@@ -205,11 +176,11 @@
   <!-- TECH -->
   <h2 style="text-align:center;font-size:28px;margin:48px 0 24px;color:#6C3A5F;">Technical details</h2>
   <table style="width:100%;border-collapse:collapse;font-size:15px;">
-    <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;width:30%;">Odoo version</td><td style="padding:10px;">19.0</td></tr>
+    <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;width:30%;">Odoo version</td><td style="padding:10px;">20.0</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;background-color:#f9fafb;"><td style="padding:10px;font-weight:600;">Edition</td><td style="padding:10px;">Community &amp; Enterprise</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;">Depends</td><td style="padding:10px;"><code>purchase</code> &mdash; nothing else</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;background-color:#f9fafb;"><td style="padding:10px;font-weight:600;">Model extended</td><td style="padding:10px;"><code>purchase.order.line</code>, with its own prefixed fields; no core field or method is replaced</td></tr>
-    <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;">Purchase Agreements</td><td style="padding:10px;">Not required and not touched &mdash; both modules can be installed together</td></tr>
+    <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;">Purchase Agreements / Alternatives</td><td style="padding:10px;">Not required and not touched &mdash; they can be installed together</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;background-color:#f9fafb;"><td style="padding:10px;font-weight:600;">Currency conversion</td><td style="padding:10px;">The order's own <code>currency_rate</code>, the same figure core Purchase uses</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:10px;font-weight:600;">Access</td><td style="padding:10px;">Visible to <code>purchase.group_purchase_user</code>; awarding and dropping restricted to <code>purchase.group_purchase_manager</code> server-side</td></tr>
     <tr style="border-bottom:1px solid #e5e7eb;background-color:#f9fafb;"><td style="padding:10px;font-weight:600;">Languages</td><td style="padding:10px;">English, Russian, Uzbek</td></tr>
@@ -229,7 +200,7 @@
 <section class="oe_container">
   <div style="margin:40px 0 24px;">
     <h2 style="text-align:center;font-size:30px;font-weight:700;margin-bottom:8px;">More apps by todoo.uz</h2>
-    <p style="text-align:center;color:#6b7280;margin-bottom:24px;">Odoo 19 apps for inventory, accounting, sales, HR and integrations &mdash; questions and custom development: <a href="mailto:info@todoo.uz" style="color:#714B67;">info@todoo.uz</a></p>
+    <p style="text-align:center;color:#6b7280;margin-bottom:24px;">Odoo apps for inventory, accounting, sales, HR and integrations &mdash; questions and custom development: <a href="mailto:info@todoo.uz" style="color:#714B67;">info@todoo.uz</a></p>
     <div class="row g-3">
       <div class="col-md-6 col-lg-4">
         <a href="https://apps.odoo.com/apps/modules/19.0/wh3d_truck" target="_blank" rel="noopener" style="display:block;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;height:100%;text-decoration:none;color:#1f2937;">

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Purchase Tender | RFQ Comparison | Compare Vendor Quotations",
-    "version": "19.0.2.4.0",
+    "version": "20.0.2.4.0",
     "category": "Purchase",
     "summary": (
         "Compare every open RFQ offer product by product, with the earliest "
@@ -39,11 +39,11 @@ Two actions for a purchase manager
 Both actions ask for confirmation first and write what happened into the
 chatter of every request they touched, so the decision is on record.
 
-Independent of Purchase Agreements
-----------------------------------
+Independent of Purchase Agreements and Alternatives
+---------------------------------------------------
 Built on the standard Purchase application only. It does not depend on
-``purchase_requisition``, and shares no field, method or view with it, so both
-can be used side by side or on their own.
+``purchase_requisition`` or ``purchase_alternative``, and shares no field,
+method or view with them, so they can be used side by side or on their own.
     """,
     "author": "todoo.uz",
     "website": "https://todoo.uz",

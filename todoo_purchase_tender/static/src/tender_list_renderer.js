@@ -1,12 +1,16 @@
-import { ListRenderer } from "@web/views/list/list_renderer";
+import { onWillStart, proxy } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { onWillStart, useState, useSubEnv } from "@odoo/owl";
+import { ListRenderer } from "@web/views/list/list_renderer";
+import {
+    provideViewButtonHandler,
+    useViewButtonHandler,
+} from "@web/views/view_button/view_button_hook";
 
 /**
  * Tender ro'yxatida eng yaxshi takliflarni yashil qiladi.
  *
  * Tuzilishi core'ning solishtirish renderer'idan olingan
- * (purchase_requisition/static/src/views/list/purchase_order_line_compare_list_renderer.js),
+ * (purchase_alternative/static/src/views/purchase_order_line_compare_list_renderer.js),
  * lekin u yerga hech qanday bog'liqlik yo'q — hisob-kitob o'z serverimizdagi
  * `purchase.order.line.get_tender_best_lines` metodida.
  */
@@ -14,7 +18,7 @@ export class TenderListRenderer extends ListRenderer {
     setup() {
         super.setup();
         this.action = useService("action");
-        this.bestFields = useState({
+        this.bestFields = proxy({
             price_ids: [],
             date_ids: [],
             qty_ids: [],
@@ -23,12 +27,12 @@ export class TenderListRenderer extends ListRenderer {
             await this.updateBestFields();
         });
         // Choose/Cancel bosilgach ro'yxat o'zgaradi — ranglar qayta hisoblanadi.
-        const defaultOnClickViewButton = this.env.onClickViewButton;
-        useSubEnv({
-            onClickViewButton: async (params) => {
-                await defaultOnClickViewButton(params);
-                await this.updateBestFields();
-            },
+        // Odoo 20: tugma ishlovchisi env'da emas, plugin orqali beriladi
+        // (web/static/src/views/view_button/view_button_hook.js:64,71).
+        const defaultOnClickViewButton = useViewButtonHandler();
+        provideViewButtonHandler(async (params) => {
+            await defaultOnClickViewButton(params);
+            await this.updateBestFields();
         });
     }
 

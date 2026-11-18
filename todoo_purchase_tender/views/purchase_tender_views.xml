@@ -2,7 +2,8 @@
 <odoo>
 
     <!-- Tender ro'yxati: bir qator = bitta so'rovdagi bitta taklif.
-         Ranglarni `tender_list` js_class beradi (static/src/tender_list_renderer.js). -->
+         Ranglarni `tender_list` js_class beradi (static/src/tender_list_renderer.js).
+         Odoo 20: tugma `icon` i Material Symbols nomi (web/.../view_button.js:24-29). -->
     <record id="view_tender_line_list" model="ir.ui.view">
         <field name="name">purchase.order.line.tender.list</field>
         <field name="model">purchase.order.line</field>
@@ -22,21 +23,21 @@
                        decoration-info="state == 'draft'"
                        decoration-success="state == 'sent'"/>
                 <field name="date_planned" string="Expected Arrival"/>
-                <field name="tender_price_label" string="Unit Price"/>
+                <field name="tender_price_label" string="Unit Price" width="240px"/>
                 <field name="tender_price_unit_cc" string="Unit Price (Company)" optional="hide"/>
                 <field name="product_qty" string="Quantity"/>
-                <field name="product_uom_id" string="Unit" optional="show"/>
+                <field name="uom_id" string="Unit" optional="show"/>
                 <button name="action_tender_choose"
                         type="object"
                         string="Choose"
-                        icon="fa-check"
+                        icon="check"
                         class="btn-link text-success"
                         groups="purchase.group_purchase_manager"
                         confirm="Award this product to this vendor? On every other request for quotation the line for this product will be removed; a request that has no other line is cancelled."/>
                 <button name="action_tender_cancel"
                         type="object"
                         string="Cancel"
-                        icon="fa-times"
+                        icon="close"
                         class="btn-link text-danger"
                         groups="purchase.group_purchase_manager"
                         confirm="Drop this offer from the tender? The line will be removed from its request for quotation; if it has no other line the request is cancelled."/>
