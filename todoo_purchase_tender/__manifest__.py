@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Purchase Tender",
+    "name": "Purchase Tender | RFQ Comparison | Compare Vendor Quotations",
     "version": "19.0.2.4.0",
     "category": "Purchase",
-    "summary": "Compare every open RFQ offer product by product and award "
-    "one vendor in a click",
+    "summary": (
+        "Compare every open RFQ offer product by product, with the earliest "
+        "arrival, lowest price and largest quantity highlighted, and award one "
+        "vendor in a click. Purchase tender, tender, RFQ comparison, compare RFQ,"
+        " compare vendor quotations, purchase quotation comparison, vendor bid "
+        "comparison, best price vendor, multi-currency RFQ comparison."
+    ),
     "description": """
 Purchase Tender
 ===============
