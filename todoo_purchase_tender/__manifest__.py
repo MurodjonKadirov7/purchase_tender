@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Purchase Tender | RFQ Comparison | Compare Vendor Quotations",
-    "version": "19.0.2.4.0",
+    "version": "19.0.2.4.1",
     "category": "Purchase",
     "summary": (
         "Compare every open RFQ offer product by product, with the earliest "
@@ -48,8 +48,6 @@ can be used side by side or on their own.
     "author": "todoo.uz",
     "website": "https://todoo.uz",
     "license": "OPL-1",
-    "price": 5,
-    "currency": "USD",
     "support": "info@todoo.uz",
     "depends": ["purchase"],
     "data": [
